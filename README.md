@@ -83,12 +83,13 @@ https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/gui-apps
 저는 구글 크롬 설치 이전까지 했을 때 GUI가 작동했습니다.   
 
 
+----------------------------------
 ## Docker_Worker_Robot
 항구에서 크레인과 트럭을 이용해 컨테이너를 옮기는 문제입니다. 해당 파일은 다른 깃허브에서 가져왔습니다만 수업시간에 배우는 내용으로 만든 것으로 확인했습니다.
 출처 사이트에서 02번이 Docker_Worker_Robot 예제입니다.   
 출처 : https://github.com/hfoffani/pddl-lib/tree/main/examples-pddl
 
-   
+   -------------------------------------------------
 ## UC Berkeley 팩맨 프로젝트 (Proj1-search-python3)   
 출처 : http://ai.berkeley.edu/project_overview.html   
 Pacman Project 항목 중 Search에 있는 파일을 가지고 진행했습니다.   
