@@ -1,0 +1,49 @@
+python pacman.py
+python pacman.py --layout testMaze --pacman GoWestAgent
+python pacman.py --layout tinyMaze --pacman GoWestAgent
+python pacman.py -h
+python pacman.py -l tinyMaze -p SearchAgent -a fn=tinyMazeSearch
+python pacman.py -l tinyMaze -p SearchAgent
+python pacman.py -l mediumMaze -p SearchAgent
+python pacman.py -l bigMaze -z .5 -p SearchAgent
+python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
+python pacman.py -l bigMaze -p SearchAgent -a fn=bfs -z .5
+python eightpuzzle.py
+python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs
+python pacman.py -l mediumDottedMaze -p StayEastSearchAgent
+python pacman.py -l mediumScaryMaze -p StayWestSearchAgent
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic 
+python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+python pacman.py -l mediumCorners -p AStarCornersAgent -z 0.5
+python pacman.py -l testSearch -p AStarFoodSearchAgent
+python pacman.py -l trickySearch -p AStarFoodSearchAgent
+python pacman.py -l bigSearch -p ClosestDotSearchAgent -z .5 
+
+
+
+FFPlanner 적용 커맨드
+python pacman.py -l p3 -p FFSearchAgent -a prob='oneshot'
+python pacman.py -l p4 -p FFSearchAgent -a prob='oneshot'
+python pacman.py -l tinyMaze -p FFSearchAgent -a prob='search'
+python pacman.py -l mediumMaze -p FFSearchAgent -a prob='search'
+python pacman.py -l bigMaze -p FFSearchAgent -a prob='search'
+python pacman.py -l tinyCorners -p FFSearchAgent -a prob='search'
+python pacman.py -l mediumDottedMaze -p FFSearchAgent -a prob='search'
+python pacman.py -l mediumCorners -p FFSearchAgent -a prob='search'
+python pacman.py -l testSearch -p FFSearchAgent -a prob='search'
+python pacman.py -l trickySearch -p FFSearchAgent -a prob='search'
+bigsearch는 다 먹긴 하는데 갔던 길 다시 가기도 함
+python pacman.py -l bigSearch -p FFSearchAgent -a prob='search'
+
+유령 없는 문제에 pacman쓰면 문제 생김
+search인데 유령 돌아다님 -> 유령 근처로 가다가 잡히는 경우 존재
+python pacman.py -l mediumScaryMaze -p FFSearchAgent -a prob='pacman'
+python pacman.py -l mediumScaryMaze -p FFSearchAgent -a prob='pacman',cycle=2
+
+power-pellet 존재하는 문제
+python pacman.py -l powerClassic -p FFSearchAgent -a prob='pacman'
+
+cycle 추가
+python pacman.py -p FFSearchAgent -a prob='pacman',cycle=2
+
