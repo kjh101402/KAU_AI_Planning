@@ -24,8 +24,8 @@ Metric Planner : https://fai.cs.uni-saarland.de/hoffmann/ff.html
 출처 : https://github.com/hfoffani/pddl-lib/tree/main/examples-pddl
 
    
-## UC Berkeley 팩맨 프로젝트 (Proj1-search-python3)
-출처 : http://ai.berkeley.edu/project_overview.html
+## UC Berkeley 팩맨 프로젝트 (Proj1-search-python3)   
+출처 : http://ai.berkeley.edu/project_overview.html   
 Pacman Project 항목 중 Search에 있는 파일을 가지고 진행했습니다.   
 
 ### 팩맨 실행
