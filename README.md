@@ -4,7 +4,48 @@
 ## FF Planner
 FF planner는 PDDL을 풀 수 있는 플래너의 일종입니다. 리눅스 환경에서만 사용할 수 있습니다. 추천하는 사용법은 WSL을 이용하는 것입니다. 설치 방법과 컴파일에 필요한 파일을 올려놓았습니다. 참고하여 진행하면 됩니다.   
 이외에도 다양한 플래너가 있습니다. 리눅스에서 동작하는 것이 대부분이라 리눅스 사용법을 알고 있는 것이 좋습니다.
-   
+
+### 설치법
+1. WSL을 사용하여 우분투를 설치한다.
+https://learn.microsoft.com/ko-kr/windows/wsl/install
+위 링크에 나온대로 하면 WSL2를 사용할 수 있을겁니다. 윈도우 터미널을 관리자 권한으로 실행 후 wsl --install을 진행하여 그대로 사용해도 되고 진행 후 다른 우분투 버전을 사용하고 싶다면 Microsoft store에서 원하는 Ubuntu를 설치하면 됩니다.   
+
+2. FF-v2.3_source.zip 파일을 WSL의 우분투에 복사한다.
+```
+cp <FF-v2.3_source.zip이 있는 경로> <파일을 복사할 위치>
+```
+```
+cp /mnt/c/Desktop/FF-v2.3_source.zip ~
+```
+리눅스에서 copy 명령어는 cp입니다. 컴파일에 필요한 파일을 zip파일로 만들었습니다. 저는 사용하기 편하게 홈 디렉토리로 복사했습니다.   
+
+3. 필요한 것들을 설치한다 컴파일과 압축 해제에 필요한 것들입니다
+```
+sudo apt update && sudo apt upgrade
+sudo apt install zip -y
+sudo apt install flex -y
+sudo apt install bison -y
+sudo apt install gcc -y
+sudo apt install vim -y
+```
+컴파일, 압축 해제 등에 필요한 것들을 다운로드 받습니다.
+
+4. source폴더의 압축을 해제한다
+```
+unzip FF-v2.3_source.zip
+```
+
+5. 폴더에 진입한다
+```
+cd FF-v2.3
+```
+
+6. 컴파일을 진행한다
+```
+make
+```
+
+7. FF planner를 사용한다.
 FF Planner 사용법
 ```
 ff -o <Domain 파일 경로> -f <Problem 파일 경로>
@@ -17,6 +58,30 @@ ff -o ~/domain/domain-02.pddl ~/problem/problem-02.pddl
 FF Planner : http://www.ai.mit.edu/courses/16.412J/ff.html   
 Metric Planner : https://fai.cs.uni-saarland.de/hoffmann/ff.html   
 이외의 다른 플래너 : https://nms.kcl.ac.uk/planning/   
+
+7-1 만약 FF planner가 실행되지 않는다면 실행 권한을 부여해봅니다
+```
+sudo chmod 777 ./ff
+```
+
+7-2 경로를 다 치기 귀찮다면 단축 명령어를 만들 수 있습니다.
+```
+sudo vi ~/.bashrc
+```
+먼저 bashrc 파일을 수정하게 vi나 편집기를 이용해 열어줍니다.
+```
+alias ff='~/FF-v2.3/ff'
+```
+Bashrc의 마지막 줄에 위 내용을 추가합니다.
+```
+source ~/.bashrc
+```
+추가한 것을 적용합니다.   
+
+7-3 최신 WSL에서는 GUI를 기본으로 사용할 수 있습니다. GUI가 작동하지 않으면 다음 글을 참고해 보세요.   
+https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/gui-apps   
+저는 구글 크롬 설치 이전까지 했을 때 GUI가 작동했습니다.   
+
 
 ## Docker_Worker_Robot
 항구에서 크레인과 트럭을 이용해 컨테이너를 옮기는 문제입니다. 해당 파일은 다른 깃허브에서 가져왔습니다만 수업시간에 배우는 내용으로 만든 것으로 확인했습니다.
