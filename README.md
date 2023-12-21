@@ -104,8 +104,9 @@ python pacman.py
 python pacman.py --layout tinyMaze --pacman GoWestAgent
 ```
 위 명령어를 통해 맵을 변경하고 에이전트를 사용할 수 있습니다. --layout은 -l로, --pacman은 -p로 줄여도 됩니다.    
-- ```--layout``` : 인자는 반드시 layout폴더에 존재하는 파일명이어야 합니다.   
-- ```--pacman``` : 인자는 *Agents.py 파일 안에 클래스여야 합니다.
+- ```--layout``` : 인자는 반드시 layout폴더에 존재하는 파일명이어야 합니다. 기본값은 MediumClassic이다.   
+- ```--pacman``` : 인자는 *Agents.py 파일 안에 클래스여야 합니다. 기본값은 KeyboardAgent이다.
+- ```--ghost``` : ghost agent를 설정할 수 있다. 기본값은 RandomGhost이다.
 
 ### 제 방식
 저는 일반 팩맨 이외에도 탐색, 한붓그리기 문제도 만들었습니다. 따라서 문제에 따라서 다른 PDDL파일을 만들고 플래너가 풀 게 했습니다.   
