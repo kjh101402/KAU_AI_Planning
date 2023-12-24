@@ -1,5 +1,7 @@
 # KAU_AI_Planning
-한국항공대학교 AI 플래닝에서 PDDL과 관련된 자료를 정리해 놓았습니다.
+한국항공대학교 AI 플래닝에서 PDDL과 관련된 자료를 정리해 놓았습니다.   
+PDDL WIKI에서 자세한 문법을 확인할 수 있습니다. 다만 FF Planner가 지원하는 범위가 매우 한정적이기 때문에 안되는 내용이 많습니다. PDDL만 주로 확인하고 PDDL 2.1 이상은 무시하셔도 될 것 같습니다.   
+PDDL WIKI: https://planning.wiki/ref/pddl
 
 ## FF Planner
 FF planner는 PDDL을 풀 수 있는 플래너의 일종입니다. 리눅스 환경에서만 사용할 수 있습니다. 추천하는 사용법은 WSL을 이용하는 것입니다. 설치 방법과 컴파일에 필요한 파일을 올려놓았습니다. 참고하여 진행하면 됩니다.   
@@ -85,7 +87,7 @@ https://learn.microsoft.com/ko-kr/windows/wsl/tutorials/gui-apps
 
 ----------------------------------
 ## Docker_Worker_Robot
-항구에서 크레인과 트럭을 이용해 컨테이너를 옮기는 문제입니다. 해당 파일은 다른 깃허브에서 가져왔습니다만 수업시간에 배우는 내용으로 만든 것으로 확인했습니다.
+항구에서 크레인과 트럭을 이용해 컨테이너를 옮기는 문제입니다. 해당 파일은 다른 깃허브에서 가져왔습니다만 수업시간에 배우는 내용으로 만든 것으로 확인했습니다. 폴더 안에 더 자세한 내용이 있습니다.
 출처 사이트에서 02번이 Docker_Worker_Robot 예제입니다.   
 출처 : https://github.com/hfoffani/pddl-lib/tree/main/examples-pddl
 
